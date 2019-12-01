@@ -1,0 +1,11 @@
+|fullAdder
+A => sum.IN0
+A => cout.IN0
+B => sum.IN1
+B => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, DE1_SOC_golden_top.sdc
+source_file = 1, C:/Users/concon/workspace/EE 271/lab1/fullAdder.sv
+source_file = 1, C:/Users/concon/workspace/EE 271/lab1/db/DE1_SoC.cbx.xml
+design_name = fullAdder
+instance = comp, \sum~output , sum~output, fullAdder, 1
+instance = comp, \cout~output , cout~output, fullAdder, 1
+instance = comp, \A~input , A~input, fullAdder, 1
+instance = comp, \cin~input , cin~input, fullAdder, 1
+instance = comp, \B~input , B~input, fullAdder, 1
+instance = comp, \sum~0 , sum~0, fullAdder, 1
+instance = comp, \cout~0 , cout~0, fullAdder, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, fullAdder, 1
