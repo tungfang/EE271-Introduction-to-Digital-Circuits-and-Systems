@@ -1,0 +1,16 @@
+
+module combine(in, HEX0);
+	
+	output logic[6:0] HEX0;
+	input logic [3:0] in;
+	
+	logic [3:0] bcd;
+	
+	assign bcd[0] = in[0];
+	assign bcd[1] = in[1];
+	assign bcd[2] = in[2];
+	assign bcd[3] = in[3];
+	
+	seg7 dut (.bcd(bcd[3:0]), .leds(HEX0[6:0]));
+	
+endmodule	

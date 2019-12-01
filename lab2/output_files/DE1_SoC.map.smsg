@@ -1,0 +1,7 @@
+Warning (10273): Verilog HDL warning at seg7.sv(17): extended using "x" or "z" File: U:/271/lab2c/lab2c/seg7.sv Line: 17
+Warning (10273): Verilog HDL warning at myDesign.sv(19): extended using "x" or "z" File: U:/271/lab2c/lab2c/myDesign.sv Line: 19
+Warning (10273): Verilog HDL warning at myDesign.sv(35): extended using "x" or "z" File: U:/271/lab2c/lab2c/myDesign.sv Line: 35
+Warning (10273): Verilog HDL warning at myDesign.sv(51): extended using "x" or "z" File: U:/271/lab2c/lab2c/myDesign.sv Line: 51
+Warning (10273): Verilog HDL warning at myDesign.sv(67): extended using "x" or "z" File: U:/271/lab2c/lab2c/myDesign.sv Line: 67
+Warning (10273): Verilog HDL warning at myDesign.sv(83): extended using "x" or "z" File: U:/271/lab2c/lab2c/myDesign.sv Line: 83
+Warning (10273): Verilog HDL warning at myDesign.sv(99): extended using "x" or "z" File: U:/271/lab2c/lab2c/myDesign.sv Line: 99

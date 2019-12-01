@@ -1,0 +1,64 @@
+
+module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW);
+
+	output logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
+	output logic [9:0] LEDR;
+	input logic [3:0] KEY;
+	input logic [9:0] SW;
+	
+	// Declaring that A, B and sum are 4 bits
+	logic [3:0] A, B, sum;
+	logic cin;
+	logic cout;
+	
+	// Assigning each bit in A and B to certain switch
+	assign cin = SW[0];
+	assign A[0] = SW[1];
+	assign A[1] = SW[2];
+	assign A[2] = SW[3];
+	assign A[3] = SW[4];
+	assign B[0] = SW[5];
+	assign B[1] = SW[6];
+	assign B[2] = SW[7];
+	assign B[3] = SW[8];
+	
+	// Assigning each LED to the certain sum's bit
+	assign LEDR[0] = sum[0];
+	assign LEDR[1] = sum[1];
+	assign LEDR[2] = sum[2];
+	assign LEDR[3] = sum[3];
+	
+	// Making the HEX to display "ADDING" on FPGA
+	assign HEX5 = 7'b0001000;
+	assign HEX4 = 7'b1000000;
+	assign HEX3 = 7'b1000000;
+	assign HEX2 = 7'b1001111;
+	assign HEX1 = 7'b1001000;
+	assign HEX0 = 7'b1000010;	
+	
+	// 
+	fullAdder4 FA (.A(A[3:0]), .B(B[3:0]), .cin(SW[0]), .sum(sum[3:0]), .cout(LEDR[4]));	
+	
+endmodule
+
+module DE1_SoC_testbench();
+	
+	logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
+	logic [9:0] LEDR;
+	logic [3:0] KEY;
+	logic [9:0] SW;
+	
+	DE1_SoC dut (.HEX0, .HEX1, .HEX2, .HEX3, .HEX4, .HEX5, .KEY, .LEDR, .SW);
+
+	// Using the for loop to generate all the combination to test
+	integer i;
+	initial begin
+	SW[9] = 1'b0; // switch 9 set to 0 because it is not used
+	
+	for (i = 0; i < 2**9; i++) begin
+		SW[8:0] = i; #10;
+	end
+
+end
+
+endmodule
