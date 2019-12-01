@@ -1,0 +1,404 @@
+|DE1_SoC
+CLOCK_50 => CLOCK_50.IN2
+HEX0[0] << playField:tugOfWar.winner
+HEX0[1] << playField:tugOfWar.winner
+HEX0[2] << playField:tugOfWar.winner
+HEX0[3] << playField:tugOfWar.winner
+HEX0[4] << playField:tugOfWar.winner
+HEX0[5] << playField:tugOfWar.winner
+HEX0[6] << playField:tugOfWar.winner
+HEX1[0] << <GND>
+HEX1[1] << <GND>
+HEX1[2] << <GND>
+HEX1[3] << <GND>
+HEX1[4] << <GND>
+HEX1[5] << <GND>
+HEX1[6] << <GND>
+HEX2[0] << <GND>
+HEX2[1] << <GND>
+HEX2[2] << <GND>
+HEX2[3] << <GND>
+HEX2[4] << <GND>
+HEX2[5] << <GND>
+HEX2[6] << <GND>
+HEX3[0] << <GND>
+HEX3[1] << <GND>
+HEX3[2] << <GND>
+HEX3[3] << <GND>
+HEX3[4] << <GND>
+HEX3[5] << <GND>
+HEX3[6] << <GND>
+HEX4[0] << <GND>
+HEX4[1] << <GND>
+HEX4[2] << <GND>
+HEX4[3] << <GND>
+HEX4[4] << <GND>
+HEX4[5] << <GND>
+HEX4[6] << <GND>
+HEX5[0] << <GND>
+HEX5[1] << <GND>
+HEX5[2] << <GND>
+HEX5[3] << <GND>
+HEX5[4] << <GND>
+HEX5[5] << <GND>
+HEX5[6] << <GND>
+KEY[0] => _.IN1
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => _.IN1
+LEDR[0] << <GND>
+LEDR[1] << playField:tugOfWar.lights
+LEDR[2] << playField:tugOfWar.lights
+LEDR[3] << playField:tugOfWar.lights
+LEDR[4] << playField:tugOfWar.lights
+LEDR[5] << playField:tugOfWar.lights
+LEDR[6] << playField:tugOfWar.lights
+LEDR[7] << playField:tugOfWar.lights
+LEDR[8] << playField:tugOfWar.lights
+LEDR[9] << playField:tugOfWar.lights
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => SW[9].IN2
+
+
+|DE1_SoC|userInput:keyEnter
+Clock => metastability:mL.Clock
+Clock => metastability:mR.Clock
+Clock => keyPress2:left.Clock
+Clock => keyPress2:right.Clock
+Reset => metastability:mL.Reset
+Reset => metastability:mR.Reset
+Reset => keyPress2:left.Reset
+Reset => keyPress2:right.Reset
+L => metastability:mL.in
+R => metastability:mR.in
+outL <= keyPress2:left.out
+outR <= keyPress2:right.out
+
+
+|DE1_SoC|userInput:keyEnter|metastability:mL
+Clock => out~reg0.CLK
+Clock => temp.CLK
+Reset => temp.OUTPUTSELECT
+Reset => out.OUTPUTSELECT
+in => temp.DATAA
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|userInput:keyEnter|metastability:mR
+Clock => out~reg0.CLK
+Clock => temp.CLK
+Reset => temp.OUTPUTSELECT
+Reset => out.OUTPUTSELECT
+in => temp.DATAA
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|userInput:keyEnter|keyPress2:left
+Clock => ps[0].CLK
+Clock => ps[1].CLK
+Clock => ps[2].CLK
+Clock => ps[3].CLK
+Clock => ps[4].CLK
+Clock => ps[5].CLK
+Clock => ps[6].CLK
+Clock => ps[7].CLK
+Clock => ps[8].CLK
+Clock => ps[9].CLK
+Clock => ps[10].CLK
+Clock => ps[11].CLK
+Clock => ps[12].CLK
+Clock => ps[13].CLK
+Clock => ps[14].CLK
+Clock => ps[15].CLK
+Clock => ps[16].CLK
+Clock => ps[17].CLK
+Clock => ps[18].CLK
+Clock => ps[19].CLK
+Clock => ps[20].CLK
+Clock => ps[21].CLK
+Clock => ps[22].CLK
+Clock => ps[23].CLK
+Clock => ps[24].CLK
+Clock => ps[25].CLK
+Clock => ps[26].CLK
+Clock => ps[27].CLK
+Clock => ps[28].CLK
+Clock => ps[29].CLK
+Clock => ps[30].CLK
+Clock => ps[31].CLK
+Reset => ps.OUTPUTSELECT
+key => ps.DATAA
+key => out.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|userInput:keyEnter|keyPress2:right
+Clock => ps[0].CLK
+Clock => ps[1].CLK
+Clock => ps[2].CLK
+Clock => ps[3].CLK
+Clock => ps[4].CLK
+Clock => ps[5].CLK
+Clock => ps[6].CLK
+Clock => ps[7].CLK
+Clock => ps[8].CLK
+Clock => ps[9].CLK
+Clock => ps[10].CLK
+Clock => ps[11].CLK
+Clock => ps[12].CLK
+Clock => ps[13].CLK
+Clock => ps[14].CLK
+Clock => ps[15].CLK
+Clock => ps[16].CLK
+Clock => ps[17].CLK
+Clock => ps[18].CLK
+Clock => ps[19].CLK
+Clock => ps[20].CLK
+Clock => ps[21].CLK
+Clock => ps[22].CLK
+Clock => ps[23].CLK
+Clock => ps[24].CLK
+Clock => ps[25].CLK
+Clock => ps[26].CLK
+Clock => ps[27].CLK
+Clock => ps[28].CLK
+Clock => ps[29].CLK
+Clock => ps[30].CLK
+Clock => ps[31].CLK
+Reset => ps.OUTPUTSELECT
+key => ps.DATAA
+key => out.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|playField:tugOfWar
+Clock => normalLight:one.Clock
+Clock => normalLight:two.Clock
+Clock => normalLight:three.Clock
+Clock => normalLight:four.Clock
+Clock => centerLight:center.Clock
+Clock => normalLight:six.Clock
+Clock => normalLight:seven.Clock
+Clock => normalLight:eight.Clock
+Clock => normalLight:nine.Clock
+Clock => victory:win.Clock
+Reset => normalLight:one.Reset
+Reset => normalLight:two.Reset
+Reset => normalLight:three.Reset
+Reset => normalLight:four.Reset
+Reset => centerLight:center.Reset
+Reset => normalLight:six.Reset
+Reset => normalLight:seven.Reset
+Reset => normalLight:eight.Reset
+Reset => normalLight:nine.Reset
+Reset => victory:win.Reset
+L => normalLight:one.L
+L => normalLight:two.L
+L => normalLight:three.L
+L => normalLight:four.L
+L => centerLight:center.L
+L => normalLight:six.L
+L => normalLight:seven.L
+L => normalLight:eight.L
+L => normalLight:nine.L
+L => victory:win.L
+R => normalLight:one.R
+R => normalLight:two.R
+R => normalLight:three.R
+R => normalLight:four.R
+R => centerLight:center.R
+R => normalLight:six.R
+R => normalLight:seven.R
+R => normalLight:eight.R
+R => normalLight:nine.R
+R => victory:win.R
+lights[1] <= normalLight:one.lightOn
+lights[2] <= normalLight:two.lightOn
+lights[3] <= normalLight:three.lightOn
+lights[4] <= normalLight:four.lightOn
+lights[5] <= centerLight:center.lightOn
+lights[6] <= normalLight:six.lightOn
+lights[7] <= normalLight:seven.lightOn
+lights[8] <= normalLight:eight.lightOn
+lights[9] <= normalLight:nine.lightOn
+winner[0] <= victory:win.winner[0]
+winner[1] <= victory:win.winner[1]
+winner[2] <= victory:win.winner[2]
+winner[3] <= victory:win.winner[3]
+winner[4] <= victory:win.winner[4]
+winner[5] <= victory:win.winner[5]
+winner[6] <= victory:win.winner[6]
+
+
+|DE1_SoC|playField:tugOfWar|normalLight:one
+Clock => lightOn~reg0.CLK
+Reset => lightOn.OUTPUTSELECT
+L => always0.IN0
+L => always0.IN0
+L => always0.IN1
+L => always0.IN0
+R => always0.IN1
+R => always0.IN0
+R => always0.IN1
+R => always0.IN1
+NL => always0.IN1
+NR => always0.IN1
+lightOn <= lightOn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|playField:tugOfWar|normalLight:two
+Clock => lightOn~reg0.CLK
+Reset => lightOn.OUTPUTSELECT
+L => always0.IN0
+L => always0.IN0
+L => always0.IN1
+L => always0.IN0
+R => always0.IN1
+R => always0.IN0
+R => always0.IN1
+R => always0.IN1
+NL => always0.IN1
+NR => always0.IN1
+lightOn <= lightOn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|playField:tugOfWar|normalLight:three
+Clock => lightOn~reg0.CLK
+Reset => lightOn.OUTPUTSELECT
+L => always0.IN0
+L => always0.IN0
+L => always0.IN1
+L => always0.IN0
+R => always0.IN1
+R => always0.IN0
+R => always0.IN1
+R => always0.IN1
+NL => always0.IN1
+NR => always0.IN1
+lightOn <= lightOn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|playField:tugOfWar|normalLight:four
+Clock => lightOn~reg0.CLK
+Reset => lightOn.OUTPUTSELECT
+L => always0.IN0
+L => always0.IN0
+L => always0.IN1
+L => always0.IN0
+R => always0.IN1
+R => always0.IN0
+R => always0.IN1
+R => always0.IN1
+NL => always0.IN1
+NR => always0.IN1
+lightOn <= lightOn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|playField:tugOfWar|centerLight:center
+Clock => lightOn~reg0.CLK
+Reset => lightOn.OUTPUTSELECT
+L => always0.IN0
+L => always0.IN0
+L => always0.IN1
+L => always0.IN0
+R => always0.IN1
+R => always0.IN0
+R => always0.IN1
+R => always0.IN1
+NL => always0.IN1
+NR => always0.IN1
+lightOn <= lightOn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|playField:tugOfWar|normalLight:six
+Clock => lightOn~reg0.CLK
+Reset => lightOn.OUTPUTSELECT
+L => always0.IN0
+L => always0.IN0
+L => always0.IN1
+L => always0.IN0
+R => always0.IN1
+R => always0.IN0
+R => always0.IN1
+R => always0.IN1
+NL => always0.IN1
+NR => always0.IN1
+lightOn <= lightOn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|playField:tugOfWar|normalLight:seven
+Clock => lightOn~reg0.CLK
+Reset => lightOn.OUTPUTSELECT
+L => always0.IN0
+L => always0.IN0
+L => always0.IN1
+L => always0.IN0
+R => always0.IN1
+R => always0.IN0
+R => always0.IN1
+R => always0.IN1
+NL => always0.IN1
+NR => always0.IN1
+lightOn <= lightOn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|playField:tugOfWar|normalLight:eight
+Clock => lightOn~reg0.CLK
+Reset => lightOn.OUTPUTSELECT
+L => always0.IN0
+L => always0.IN0
+L => always0.IN1
+L => always0.IN0
+R => always0.IN1
+R => always0.IN0
+R => always0.IN1
+R => always0.IN1
+NL => always0.IN1
+NR => always0.IN1
+lightOn <= lightOn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|playField:tugOfWar|normalLight:nine
+Clock => lightOn~reg0.CLK
+Reset => lightOn.OUTPUTSELECT
+L => always0.IN0
+L => always0.IN0
+L => always0.IN1
+L => always0.IN0
+R => always0.IN1
+R => always0.IN0
+R => always0.IN1
+R => always0.IN1
+NL => always0.IN1
+NR => always0.IN1
+lightOn <= lightOn~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|playField:tugOfWar|victory:win
+Clock => ps~1.DATAIN
+Reset => ps.OUTPUTSELECT
+Reset => ps.OUTPUTSELECT
+Reset => ps.OUTPUTSELECT
+L => always0.IN0
+L => always0.IN0
+R => always0.IN1
+R => always0.IN1
+leftLight => always0.IN1
+rightLight => always0.IN1
+winner[0] <= winner[0].DB_MAX_OUTPUT_PORT_TYPE
+winner[1] <= winner[1].DB_MAX_OUTPUT_PORT_TYPE
+winner[2] <= winner[2].DB_MAX_OUTPUT_PORT_TYPE
+winner[3] <= winner[0].DB_MAX_OUTPUT_PORT_TYPE
+winner[4] <= winner[0].DB_MAX_OUTPUT_PORT_TYPE
+winner[5] <= <VCC>
+winner[6] <= winner[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

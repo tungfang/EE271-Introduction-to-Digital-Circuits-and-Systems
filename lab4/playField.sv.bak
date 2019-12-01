@@ -1,0 +1,72 @@
+module playField (clk, Reset, L, R, lights, winner);
+ input logic clk, Reset, L, R;
+ output logic [9:1] lights;
+ output logic [6:0] winner;
+ // Your code goes here!!
+  normalLight one(.clk, .Reset, .L, .R, .NL(lights[2]), .NR(1'b0), .lightOn(lights[1]));
+  normalLight two(.clk, .Reset, .L, .R, .NL(lights[3]), .NR(lights[1]), .lightOn(lights[2]));
+  normalLight three(.clk, .Reset, .L, .R, .NL(lights[4]), .NR(lights[2]), .lightOn(lights[3]));  
+  normalLight four(.clk, .Reset, .L, .R, .NL(lights[5]), .NR(lights[3]), .lightOn(lights[4]));  
+  centerLight five(.clk, .Reset, .L, .R, .NL(lights[6]), .NR(lights[4]), .lightOn(lights[5]));  
+  normalLight six(.clk, .Reset, .L, .R, .NL(lights[7]), .NR(lights[5]), .lightOn(lights[6]));
+  normalLight seven(.clk, .Reset, .L, .R, .NL(lights[8]), .NR(lights[6]), .lightOn(lights[7]));
+  normalLight eight(.clk, .Reset, .L, .R, .NL(lights[9]), .NR(lights[7]), .lightOn(lights[8]));
+  normalLight nine(.clk, .Reset, .L, .R, .NL(1'b0), .NR(lights[8]), .lightOn(lights[9]));
+  
+  victory win(.clk, .Reset, .L, .R, .leftLight(lights[9]), .rightLight(lights[1]), .winner);
+  
+endmodule
+
+module playField_testbench();
+ logic clk, Reset, L, R;
+ logic [9:1] lights;
+ logic [6:0] winner;
+
+playField dut (clk, Reset, L, R, lights, winner);
+
+ // Set up the clock.
+parameter CLOCK_PERIOD=100;
+initial begin
+	clk <= 0;
+	forever #(CLOCK_PERIOD/2) clk <= ~clk;
+end
+
+ // Set up the inputs to the design. Each line is a clock cycle.
+ initial begin
+															    @(posedge clk);
+ Reset <= 1;			   							    @(posedge clk);
+ Reset <= 0; L <= 0; R <= 0; 						    @(posedge clk);
+				 L <= 1; 									 @(posedge clk);
+																 @(posedge clk);
+																 @(posedge clk);
+																 @(posedge clk);
+																 @(posedge clk);
+				 L <= 0; 									 @(posedge clk);
+															    @(posedge clk);
+															    @(posedge clk);
+															    @(posedge clk);
+ Reset <= 1;			   							    @(posedge clk);
+ Reset <= 0; L <= 0; R <= 0; 						    @(posedge clk);
+			  	         R <= 1; 							 @(posedge clk);
+																 @(posedge clk);
+																 @(posedge clk);
+																 @(posedge clk);
+																 @(posedge clk);	
+					   	R <= 0;							 @(posedge clk);							
+																 @(posedge clk);							
+																 @(posedge clk);	
+																 @(posedge clk);								
+ Reset <= 1;			   							    @(posedge clk);
+ Reset <= 0; L <= 0; R <= 0; 						    @(posedge clk);
+			  	         R <= 1; 							 @(posedge clk);
+				 												 @(posedge clk);
+																 @(posedge clk);
+																 @(posedge clk);
+				 L <= 1; 									 @(posedge clk);	
+				 L <= 0;									    @(posedge clk);							
+																 @(posedge clk);							
+																 @(posedge clk);	
+																 @(posedge clk);																 
+$stop; // End the simulation.
+ end
+endmodule

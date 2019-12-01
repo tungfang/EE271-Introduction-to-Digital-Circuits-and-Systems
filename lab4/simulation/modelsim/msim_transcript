@@ -1,0 +1,220 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do DE1_SoC_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/17.0/EE\ 271/lab4 {C:/intelFPGA_lite/17.0/EE 271/lab4/DE1_SoC.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:29:02 on May 06,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/17.0/EE 271/lab4" C:/intelFPGA_lite/17.0/EE 271/lab4/DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# ** Error (suppressible): (vlog-7061) C:/intelFPGA_lite/17.0/EE 271/lab4/DE1_SoC.sv(36): Variable 'divided_clocks' driven in an always_ff block, may not be driven by any other process. See C:/intelFPGA_lite/17.0/EE 271/lab4/DE1_SoC.sv(32).
+# End time: 18:29:02 on May 06,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./DE1_SoC_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/intelFPGA_lite/17.0/EE\ 271/lab4 {C:/intelFPGA_lite/17.0/EE 271/lab4/DE1_SoC.sv}"
+vlog -reportprogress 300 -work work {C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:29:17 on May 06,2019
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv 
+# -- Compiling module keyPress2
+# -- Compiling module keyPress2_testbench
+# 
+# Top level modules:
+# 	keyPress2_testbench
+# End time: 18:29:17 on May 06,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyPress2_testbench
+# vsim work.keyPress2_testbench 
+# Start time: 18:29:21 on May 06,2019
+# Loading sv_std.std
+# Loading work.keyPress2_testbench
+# Loading work.keyPress2
+add wave -position end sim:/keyPress2_testbench/*
+run -all
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv(56)
+#    Time: 1250 ps  Iteration: 1  Instance: /keyPress2_testbench
+# Break in Module keyPress2_testbench at C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv line 56
+add wave -position end sim:/keyPress2_testbench/dut/*
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv(56)
+#    Time: 1250 ps  Iteration: 1  Instance: /keyPress2_testbench
+# Break in Module keyPress2_testbench at C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv line 56
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv(56)
+#    Time: 1250 ps  Iteration: 1  Instance: /keyPress2_testbench
+# Break in Module keyPress2_testbench at C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv line 56
+vlog -reportprogress 300 -work work {C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:37:33 on May 06,2019
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv 
+# -- Compiling module keyPress2
+# -- Compiling module keyPress2_testbench
+# 
+# Top level modules:
+# 	keyPress2_testbench
+# End time: 18:37:33 on May 06,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.keyPress2_testbench
+# Loading work.keyPress2
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv(56)
+#    Time: 1250 ps  Iteration: 1  Instance: /keyPress2_testbench
+# Break in Module keyPress2_testbench at C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv line 56
+vlog -reportprogress 300 -work work {C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:00:11 on May 06,2019
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv 
+# -- Compiling module metastability
+# -- Compiling module metastability_testbench
+# 
+# Top level modules:
+# 	metastability_testbench
+# End time: 19:00:11 on May 06,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.metastability_testbench
+# End time: 19:00:23 on May 06,2019, Elapsed time: 0:31:02
+# Errors: 0, Warnings: 0
+# vsim work.metastability_testbench 
+# Start time: 19:00:23 on May 06,2019
+# Loading sv_std.std
+# Loading work.metastability_testbench
+# Loading work.metastability
+add wave -position end sim:/metastability_testbench/dut/*
+run -all
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv(50)
+#    Time: 1250 ps  Iteration: 1  Instance: /metastability_testbench
+# Break in Module metastability_testbench at C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv line 50
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv(50)
+#    Time: 1250 ps  Iteration: 1  Instance: /metastability_testbench
+# Break in Module metastability_testbench at C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv line 50
+vsim work.keyPress2_testbench
+# End time: 19:09:14 on May 06,2019, Elapsed time: 0:08:51
+# Errors: 0, Warnings: 0
+# vsim work.keyPress2_testbench 
+# Start time: 19:09:14 on May 06,2019
+# Loading sv_std.std
+# Loading work.keyPress2_testbench
+# Loading work.keyPress2
+vsim work.metastability_testbench
+# End time: 19:09:21 on May 06,2019, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0
+# vsim work.metastability_testbench 
+# Start time: 19:09:21 on May 06,2019
+# Loading sv_std.std
+# Loading work.metastability_testbench
+# Loading work.metastability
+add wave -position end sim:/metastability_testbench/dut/*
+run -all
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv(50)
+#    Time: 1250 ps  Iteration: 1  Instance: /metastability_testbench
+# Break in Module metastability_testbench at C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv line 50
+vlog -reportprogress 300 -work work {C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:10:26 on May 06,2019
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv 
+# -- Compiling module metastability
+# -- Compiling module metastability_testbench
+# 
+# Top level modules:
+# 	metastability_testbench
+# End time: 19:10:26 on May 06,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.metastability_testbench
+# Loading work.metastability
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv(50)
+#    Time: 1250 ps  Iteration: 1  Instance: /metastability_testbench
+# Break in Module metastability_testbench at C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv line 50
+vlog -reportprogress 300 -work work {C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:12:34 on May 06,2019
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv 
+# -- Compiling module metastability
+# -- Compiling module metastability_testbench
+# ** Error: (vlog-13069) C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv(43): near "@": syntax error, unexpected '@', expecting ';'.
+# End time: 19:12:34 on May 06,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+restart -f
+# Loading work.metastability
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv(50)
+#    Time: 1250 ps  Iteration: 1  Instance: /metastability_testbench
+# Break in Module metastability_testbench at C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv line 50
+vlog -reportprogress 300 -work work {C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:13:37 on May 06,2019
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv 
+# -- Compiling module metastability
+# -- Compiling module metastability_testbench
+# ** Error: (vlog-13069) C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv(43): near "@": syntax error, unexpected '@', expecting ';'.
+# ** Error: (vlog-13069) C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv(46): near "in": syntax error, unexpected IDENTIFIER, expecting ';'.
+# End time: 19:13:37 on May 06,2019, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work {C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:14:07 on May 06,2019
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv 
+# -- Compiling module metastability
+# -- Compiling module metastability_testbench
+# ** Error: (vlog-13069) C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv(43): near "@": syntax error, unexpected '@', expecting ';'.
+# End time: 19:14:08 on May 06,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work {C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:14:36 on May 06,2019
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv 
+# -- Compiling module metastability
+# -- Compiling module metastability_testbench
+# 
+# Top level modules:
+# 	metastability_testbench
+# End time: 19:14:36 on May 06,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# Loading work.metastability_testbench
+# Loading work.metastability
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv(50)
+#    Time: 1250 ps  Iteration: 1  Instance: /metastability_testbench
+# Break in Module metastability_testbench at C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv line 50
+# End time: 19:22:12 on May 06,2019, Elapsed time: 0:12:51
+# Errors: 4, Warnings: 0

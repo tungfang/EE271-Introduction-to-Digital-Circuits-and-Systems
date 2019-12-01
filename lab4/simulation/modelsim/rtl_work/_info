@@ -1,0 +1,134 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/17.0/EE 271/lab4/simulation/modelsim
+vDE1_SoC
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1557192542
+!i10b 1
+!s100 5Wj3NdBnBfP0DQP>g2a4Z3
+IzH[cc]YmSHKPi]kJQcOTX0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 DE1_SoC_sv_unit
+S1
+R0
+w1557189984
+8C:/intelFPGA_lite/17.0/EE 271/lab4/DE1_SoC.sv
+FC:/intelFPGA_lite/17.0/EE 271/lab4/DE1_SoC.sv
+L0 2
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1557192542.000000
+!s107 C:/intelFPGA_lite/17.0/EE 271/lab4/DE1_SoC.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA_lite/17.0/EE 271/lab4|C:/intelFPGA_lite/17.0/EE 271/lab4/DE1_SoC.sv|
+!i113 1
+o-sv -work work
+!s92 -sv -work work {+incdir+C:/intelFPGA_lite/17.0/EE 271/lab4}
+Z4 tCvgOpt 0
+n@d@e1_@so@c
+vkeyPress2
+R1
+Z5 !s110 1557193053
+!i10b 1
+!s100 mSRD?Tz43DU6j_dEZ?OY=3
+I50e3EQaA7VM]CVWRgMolU3
+R2
+Z6 !s105 keyPress2_sv_unit
+S1
+R0
+Z7 w1557192968
+Z8 8C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv
+Z9 FC:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv
+L0 2
+R3
+r1
+!s85 0
+31
+Z10 !s108 1557193053.000000
+Z11 !s107 C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv|
+Z12 !s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/17.0/EE 271/lab4/keyPress2.sv|
+!i113 1
+Z13 o-work work
+R4
+nkey@press2
+vkeyPress2_testbench
+R1
+R5
+!i10b 1
+!s100 8=?Q4XoV707YjOB>EZc`Q3
+IE2^=X9CLM68DNWCaFL?KL2
+R2
+R6
+S1
+R0
+R7
+R8
+R9
+L0 29
+R3
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 1
+R13
+R4
+nkey@press2_testbench
+vmetastability
+R1
+Z14 !s110 1557195276
+!i10b 1
+!s100 >g>e^9BT:i31XI?YJ;S7o3
+I?2mQBbT^l]Q4mzQ<KdG<L2
+R2
+Z15 !s105 metastability_sv_unit
+S1
+R0
+Z16 w1557195262
+Z17 8C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv
+Z18 FC:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv
+L0 2
+R3
+r1
+!s85 0
+31
+Z19 !s108 1557195276.000000
+Z20 !s107 C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv|
+Z21 !s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/17.0/EE 271/lab4/metastability.sv|
+!i113 1
+R13
+R4
+vmetastability_testbench
+R1
+R14
+!i10b 1
+!s100 >JR50dB_KmF:hShZ4N_l`1
+I33aEBAg6EM6c7H]bUNMF^0
+R2
+R15
+S1
+R0
+R16
+R17
+R18
+L0 23
+R3
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 1
+R13
+R4

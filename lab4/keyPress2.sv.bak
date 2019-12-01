@@ -1,0 +1,13 @@
+
+module keyPress2(Clock, Reset, key, out);
+	input logic Clock, Reset, key;
+	output logic out;
+	
+	enum { } ps, ns;
+	
+	// Key Press Logic
+	always_comb begin
+		
+	
+endmodule
+

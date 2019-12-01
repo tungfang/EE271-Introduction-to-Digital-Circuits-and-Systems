@@ -1,0 +1,6 @@
+
+State Machine - |DE1_SoC|playField:tugOfWar|victory:win|ps
+Name ps~4 ps~3 ps~2 
+ps.inGame 0 0 0 
+ps.p1Wins 1 1 0 
+ps.p2Wins 0 1 1 

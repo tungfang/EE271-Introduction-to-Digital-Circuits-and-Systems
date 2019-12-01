@@ -1,0 +1,8 @@
+
+module metastability(Clock, Reset, );
+
+endmodule
+
+module metastability_testbench();
+
+endmodule
