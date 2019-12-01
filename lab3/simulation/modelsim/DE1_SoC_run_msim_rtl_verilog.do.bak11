@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/intelFPGA/17.0/lab3 {C:/intelFPGA/17.0/lab3/hlight.sv}
+vlog -sv -work work +incdir+C:/intelFPGA/17.0/lab3 {C:/intelFPGA/17.0/lab3/DE1_SoC.sv}
+
